@@ -3,9 +3,7 @@
         @foreach ($roomtype as $data)
             <x-medium-cards>
                 <x-slot name="link">{{ route('rooms.show', $data->name) }}</x-slot>
-                <x-slot name="img">
-                    {{ Storage::url($data->img) }}
-                </x-slot>
+                <x-slot name="img">{{$data->img}}</x-slot>
                 <x-slot name="alt">
                     {{ $data->name }}
                 </x-slot>
